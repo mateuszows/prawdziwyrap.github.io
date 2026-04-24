@@ -3,72 +3,105 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RAP ARTIST</title>
+<title>RAP HUB</title>
 
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #0a0a0a;
+  background: #0b0b0b;
   color: white;
+}
+
+/* HEADER */
+header {
+  background: #000;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #ff0033;
+}
+
+header h1 {
+  margin: 0;
+  color: #ff0033;
+  letter-spacing: 3px;
+}
+
+header p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #111;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #ff0033;
 }
 
 /* HERO */
 .hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle at top, #1a1a1a, #000);
   text-align: center;
+  padding: 80px 20px;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
 }
 
-.hero h1 {
-  font-size: 60px;
-  margin: 0;
-  letter-spacing: 4px;
+.hero h2 {
+  font-size: 40px;
   color: #ff0033;
 }
 
 .hero p {
-  color: #aaa;
-  margin-top: 10px;
+  color: #bbb;
 }
 
-/* BUTTONS */
-.btn {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: 1px solid #ff0033;
-  color: #ff0033;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #ff0033;
-  color: black;
-}
-
-/* SECTIONS */
+/* SECTION */
 section {
-  padding: 80px 20px;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
+  padding: 40px 20px;
 }
 
 h2 {
   color: #ff0033;
-  margin-bottom: 20px;
-  letter-spacing: 2px;
+  border-left: 4px solid #ff0033;
+  padding-left: 10px;
 }
 
-/* MUSIC BOX */
-.track {
+/* ARTYŚCI */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.card {
   background: #111;
   padding: 15px;
-  margin: 10px 0;
+  border: 1px solid #222;
+}
+
+.card:hover {
+  border-color: #ff0033;
+}
+
+/* NEWS */
+.news {
+  background: #111;
+  padding: 15px;
+  margin-bottom: 10px;
   border-left: 3px solid #ff0033;
 }
 
@@ -84,46 +117,63 @@ footer {
 
 <body>
 
-<!-- HERO -->
+<header>
+  <h1>RAP HUB</h1>
+  <p>Najświeższy rap • premiery • underground • mainstream</p>
+</header>
+
+<nav>
+  <a href="#news">NEWS</a>
+  <a href="#artists">ARTYŚCI</a>
+  <a href="#releases">PREMIERY</a>
+</nav>
+
 <div class="hero">
-  <h1>RAP NAME</h1>
-  <p>Oficjalny fanpage • muzyka • vibe</p>
-  <a class="btn" href="#music">Posłuchaj</a>
+  <h2>🔥 RAP NAJNOWSZE INFORMACJE</h2>
+  <p>Promujemy artystów, nowe tracki i underground vibe</p>
 </div>
 
-<!-- ABOUT -->
-<section>
-  <h2>O MNIE</h2>
-  <p>
-    Jestem niezależnym artystą rapowym. Tworzę muzykę z ulicznym klimatem,
-    emocjami i autentycznym stylem.
-  </p>
+<!-- NEWS -->
+<section id="news">
+  <h2>NEWS</h2>
+
+  <div class="news">🔥 Nowy track: Artysta X – „Ulica 2026”</div>
+  <div class="news">💿 Premiera EP: Young Rapper – „No Stress”</div>
+  <div class="news">📢 Underground scena rośnie w PL</div>
 </section>
 
-<!-- MUSIC -->
-<section id="music">
-  <h2>UTWORY</h2>
+<!-- ARTYŚCI -->
+<section id="artists">
+  <h2>ARTYŚCI</h2>
 
-  <div class="track">🔥 Track 1 – „Nazwa kawałka”</div>
-  <div class="track">🔥 Track 2 – „Nazwa kawałka”</div>
-  <div class="track">🔥 Track 3 – „Nazwa kawałka”</div>
+  <div class="grid">
+    <div class="card">
+      <h3>ARTYSTA 1</h3>
+      <p>Trap / Drill / Hip-Hop</p>
+    </div>
 
-  <!-- YouTube embed przykład -->
-  <iframe width="100%" height="315"
-    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-    frameborder="0" allowfullscreen>
-  </iframe>
+    <div class="card">
+      <h3>ARTYSTA 2</h3>
+      <p>Underground rap</p>
+    </div>
+
+    <div class="card">
+      <h3>ARTYSTA 3</h3>
+      <p>Mainstream vibe</p>
+    </div>
+  </div>
 </section>
 
-<!-- CONTACT -->
-<section>
-  <h2>KONTAKT</h2>
-  <p>Instagram: @twojanazwa</p>
-  <p>Email: kontakt@twojanazwa.pl</p>
+<!-- PREMIERY -->
+<section id="releases">
+  <h2>PREMIERY</h2>
+
+  <div class="news">🎧 Track: „Nowy Styl” – Artist A</div>
+  <div class="news">🎧 Album: „Night City” – Artist B</div>
 </section>
 
 <footer>
-  © 2026 RAP NAME • All rights reserved
+  © RAP HUB • Fanpage / promo / hip-hop culture
 </footer>
 
 </body>
