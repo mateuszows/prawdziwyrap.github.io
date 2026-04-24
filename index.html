@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAP ARTIST</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0a0a0a;
+  color: white;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin: 0;
+  letter-spacing: 4px;
+  color: #ff0033;
+}
+
+.hero p {
+  color: #aaa;
+  margin-top: 10px;
+}
+
+/* BUTTONS */
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid #ff0033;
+  color: #ff0033;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff0033;
+  color: black;
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  color: #ff0033;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+/* MUSIC BOX */
+.track {
+  background: #111;
+  padding: 15px;
+  margin: 10px 0;
+  border-left: 3px solid #ff0033;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #555;
+  font-size: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>RAP NAME</h1>
+  <p>Oficjalny fanpage • muzyka • vibe</p>
+  <a class="btn" href="#music">Posłuchaj</a>
+</div>
+
+<!-- ABOUT -->
+<section>
+  <h2>O MNIE</h2>
+  <p>
+    Jestem niezależnym artystą rapowym. Tworzę muzykę z ulicznym klimatem,
+    emocjami i autentycznym stylem.
+  </p>
+</section>
+
+<!-- MUSIC -->
+<section id="music">
+  <h2>UTWORY</h2>
+
+  <div class="track">🔥 Track 1 – „Nazwa kawałka”</div>
+  <div class="track">🔥 Track 2 – „Nazwa kawałka”</div>
+  <div class="track">🔥 Track 3 – „Nazwa kawałka”</div>
+
+  <!-- YouTube embed przykład -->
+  <iframe width="100%" height="315"
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+    frameborder="0" allowfullscreen>
+  </iframe>
+</section>
+
+<!-- CONTACT -->
+<section>
+  <h2>KONTAKT</h2>
+  <p>Instagram: @twojanazwa</p>
+  <p>Email: kontakt@twojanazwa.pl</p>
+</section>
+
+<footer>
+  © 2026 RAP NAME • All rights reserved
+</footer>
+
+</body>
+</html>
